@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
+import { WalletConnectButton } from '@/components/wallet-connect-button';
 import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
@@ -15,12 +16,9 @@ const Main = (props: IMainProps) => (
     <div className="mx-auto max-w-screen-md">
       <div className="border-b border-gray-300">
         <div className="pt-16 pb-8">
-          <div className="text-3xl font-bold text-gray-900">
-            {AppConfig.title}
-          </div>
-          <div className="text-xl">{AppConfig.description}</div>
+          <div className="text-3xl font-bold text-gray-900">Bitcoin App</div>
         </div>
-        <div>
+        <div className="mb-10 flex items-center justify-between">
           <ul className="flex flex-wrap text-xl">
             <li className="mr-6">
               <Link href="/">
@@ -36,15 +34,8 @@ const Main = (props: IMainProps) => (
                 </a>
               </Link>
             </li>
-            <li className="mr-6">
-              <a
-                className="border-none text-gray-700 hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                GitHub
-              </a>
-            </li>
           </ul>
+          <WalletConnectButton />
         </div>
       </div>
 
