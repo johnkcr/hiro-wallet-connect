@@ -20,9 +20,7 @@ const Index = () => {
       }
     >
       <h1 className="text-2xl font-bold"></h1>
-      {stxAddress && (
-        <AccountDetail address={'ST316ECT18D47QPWH7J9V1RDQPE0BC7DW368RHWTT'} />
-      )}
+      {stxAddress && <AccountDetail address={address} />}
     </Main>
   );
 };
